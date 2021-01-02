@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { DatePicker } from 'antd';
 
 import '../../../../assets/style.css'
@@ -11,5 +12,10 @@ const DateSelection = props => {
         </div>
     );
 };
+
+DateSelection.propTypes = {
+    selectDate: PropTypes.func,
+    value: PropTypes.string
+}
 
 export default DateSelection;
