@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { Breadcrumb } from 'antd';
 import CurrentDate from '../CurrentDate';
 
@@ -20,5 +21,9 @@ const PathLocation = props => {
         </div>
     );
 };
+
+PathLocation.propTypes = {
+    pathName: PropTypes.array
+}
 
 export default PathLocation;
