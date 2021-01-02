@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Select } from 'antd';
 
 import '../../../../assets/style.css'
@@ -20,13 +21,13 @@ const SelectBase = props => {
             defaultValue='EUR'
             onChange={selectChange}
         >
-            {baseList.map(item => {
-                return (
-                    <Option value={item}>{item}</Option>
-                )
-            })}
+            {baseList.map(item => <Option value={item}>{item}</Option>)}
         </Select>
     );
 };
+
+SelectBase.propTypes = {
+    selectChange: PropTypes.func
+}
 
 export default SelectBase;
