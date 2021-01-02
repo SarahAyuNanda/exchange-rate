@@ -7,8 +7,7 @@ import PathLocation from '../../../components/PathLocation';
 import PathName from '../../../PathName';
 import LatestRateAPI from '../../../services/api/LatestRate';
 import SelectBase from '../../../components/Select/Dropdown/SingleSelection';
-import DateRate from '../../../components/ShowDate';
-import BaseRate from '../../../components/ShowBase';
+import RateInfo from '../../../components/ShowInfo';
 import Loading from '../../../components/Loading';
 import TableRate from '../../../components/Table/SimpleTableRate';
 
@@ -40,9 +39,7 @@ const ExchangeRateByBase = () => {
                 setBaseRateData(response)
                 setIsLoading(false)
             })
-            .catch(err => {
-                setIsLoading(true)
-            })
+            .catch(err => setIsLoading(true))
     }
 
     useEffect(() => {
@@ -87,8 +84,8 @@ const ExchangeRateByBase = () => {
                             Submit
                         </Button>
                     </Space>
-                    <DateRate date={dateData} title='Date' />
-                    <BaseRate base={baseData} />
+                    <RateInfo title='Date' value={dateData} />
+                    <RateInfo title='Base' value={baseData} />
                     {isLoading ?
                         <Loading />
                         :

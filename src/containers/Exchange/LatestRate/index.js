@@ -7,10 +7,9 @@ import AppFooter from '../../../components/Footer';
 import PathLocation from '../../../components/PathLocation';
 import PathName from '../../../PathName';
 import LatestRateAPI from '../../../services/api/LatestRate';
-import DateRate from '../../../components/ShowDate';
-import BaseRate from '../../../components/ShowBase';
-import TableRate from '../../../components/Table/SimpleTableRate';
+import RateInfo from '../../../components/ShowInfo';
 import Loading from '../../../components/Loading';
+import TableRate from '../../../components/Table/SimpleTableRate';
 
 import '../../../assets/style.css'
 
@@ -80,8 +79,8 @@ const ExchangeRateByLatest = () => {
                             <Link to={PathName.HOME.LATEST.LATEST_SYMBOL}>Symbol</Link>
                         </Button>
                     </Space>
-                    <DateRate date={dateData} title='Date' />
-                    <BaseRate base={baseData} />
+                    <RateInfo title='Date' value={dateData} />
+                    <RateInfo title='Base' value={baseData} />
                     {isLoading ?
                         <Loading />
                         :

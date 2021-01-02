@@ -8,8 +8,7 @@ import PathName from '../../../PathName';
 import HistoryRateAPI from '../../../services/api/HistoryRate';
 import SelectSymbol from '../../../components/Select/Dropdown/MultiSelection';
 import DateRangeSelection from '../../../components/Select/Date/DateRangePicker';
-import DateRate from '../../../components/ShowDate';
-import BaseRate from '../../../components/ShowBase';
+import RateInfo from '../../../components/ShowInfo';
 import Loading from '../../../components/Loading';
 import TableExpandRate from '../../../components/Table/ExpandedTableRate';
 
@@ -118,9 +117,9 @@ const ExchangeRateByPeriodeSymbol = () => {
                             Submit
                         </Button>
                     </Space>
-                    <DateRate date={startDateData} title='Start Date' />
-                    <DateRate date={endDateData} title='End Date' />
-                    <BaseRate base={baseData} />
+                    <RateInfo title='Start Date' value={startDateData} /> 
+                    <RateInfo title='End Date' value={endDateData} /> 
+                    <RateInfo title='Base' value={baseData} /> 
                     {isLoading ?
                         <Loading />
                         :

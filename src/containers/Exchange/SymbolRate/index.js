@@ -7,8 +7,7 @@ import PathLocation from '../../../components/PathLocation';
 import PathName from '../../../PathName';
 import LatestRateAPI from '../../../services/api/LatestRate';
 import SelectSymbol from '../../../components/Select/Dropdown/MultiSelection';
-import DateRate from '../../../components/ShowDate';
-import BaseRate from '../../../components/ShowBase';
+import RateInfo from '../../../components/ShowInfo';
 import Loading from '../../../components/Loading';
 import TableRate from '../../../components/Table/SimpleTableRate';
 
@@ -88,8 +87,8 @@ const ExchangeRateBySymbol = () => {
                             Submit
                         </Button>
                     </Space>
-                    <DateRate date={dateData} title='Date' />
-                    <BaseRate base={baseData} />
+                    <RateInfo title='Date' value={dateData} />
+                    <RateInfo title='Base' value={baseData} />
                     {isLoading ?
                         <Loading />
                         :
