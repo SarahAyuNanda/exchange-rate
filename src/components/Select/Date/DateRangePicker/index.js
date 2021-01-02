@@ -19,8 +19,4 @@ DateRangeSelection.propTypes = {
     selectDate: PropTypes.func
 }
 
-DateRangeSelection.defaultProps = {
-    selectDate: () => {console.log('value');}
-}
-
 export default DateRangeSelection;
