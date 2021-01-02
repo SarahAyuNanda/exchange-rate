@@ -82,9 +82,16 @@ const ExchangeRateByDate = () => {
                 <div className='content'>
                     <Space size='small'>
                         <DateSelection selectDate={selectDateHandler} value={selectedDate} />
-                        <Button type='primary' shape='round' style={{ width: 100 }} onClick={loadData}>Submit</Button>
+                        <Button
+                            type='primary'
+                            shape='round'
+                            style={{ width: 100 }}
+                            onClick={loadData}
+                        >
+                            Submit
+                        </Button>
                     </Space>
-                    <DateRate date={dateData} title='Date'/>
+                    <DateRate date={dateData} title='Date' />
                     <BaseRate base={baseData} />
                     {isLoading ?
                         <Loading />
