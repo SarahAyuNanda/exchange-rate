@@ -6,6 +6,7 @@ import '../../../assets/style.css'
 
 const TableRate = props => {
     const { data } = props
+    
     const columnTitle = [
         { title: '#', dataIndex: 'number', key: 'number' },
         { title: 'Currency', dataIndex: 'currency', key: 'currency' },
