@@ -1,0 +1,23 @@
+:root {
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+}
+
+.title {
+    position: absolute;
+    width: 100px;
+    color: var(--white-color);
+}
+
+.menu {
+    position: absolute;
+    width: max-content;
+    left: 200px;
+}
+
+.logout {
+    position: absolute;
+    width: max-content;
+    right: 50px;
+    color: var(--white-color);
+}

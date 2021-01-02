@@ -1,0 +1,6 @@
+.path {
+    margin: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
