@@ -6,12 +6,27 @@ import '../../../assets/style.css'
 
 const TableRate = props => {
     const { data } = props
-    
+
     const columnTitle = [
-        { title: '#', dataIndex: 'number', key: 'number' },
-        { title: 'Currency', dataIndex: 'currency', key: 'currency' },
-        { title: 'Rate', dataIndex: 'rate', key: 'rate' }
+        {
+            title: '#',
+            dataIndex: 'number',
+            key: 'number',
+        },
+        {
+            title: 'Currency',
+            dataIndex: 'currency',
+            key: 'currency',
+            sortDirection: ['descend', 'ascend'],
+            sorter: (a, b) => a.currency.localeCompare(b.currency)
+        },
+        {
+            title: 'Rate',
+            dataIndex: 'rate',
+            key: 'rate'
+        }
     ]
+
     return (
         <Table
             columns={columnTitle}
