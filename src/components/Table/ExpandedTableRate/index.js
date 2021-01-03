@@ -36,8 +36,7 @@ const TableExpandRate = props => {
             columns={columnTitle}
             dataSource={data}
             pagination={{ position: ['bottomCenter'], pageSize: 5 }}
-            className='table'
-            size='medium' />
+            className='table' />
     );
 };
 
