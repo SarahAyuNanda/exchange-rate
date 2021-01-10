@@ -5,7 +5,7 @@ import { Button, Layout, Space } from 'antd';
 import AppHeader from '../../../components/Header';
 import AppFooter from '../../../components/Footer';
 import PathLocation from '../../../components/PathLocation';
-import PathName from '../../../PathName';
+import PathName from '../../../helpers/PathName';
 import LatestRateAPI from '../../../services/api/LatestRate';
 import RateInfo from '../../../components/ShowInfo';
 import Loading from '../../../components/Loading';
