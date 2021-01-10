@@ -4,30 +4,23 @@ import { Table } from 'antd';
 
 import '../../../assets/style.css'
 
-const TableExpandRate = props => {
+const TableList = props => {
     const { data } = props
 
     const columnTitle = [
         {
-            title: '#',
-            dataIndex: 'number',
-            key: 'number'
+            title: 'Currency Code',
+            dataIndex: 'code',
+            key: 'code',
+            sortDirection: ['descend', 'ascend'],
+            sorter: (a, b) => a.code.localeCompare(b.code),
+            align: 'center'
         },
         {
-            title: 'Date',
-            dataIndex: 'date',
-            key: 'date',
-            sorter: (a, b) => new Date(a.date) - new Date(b.date)
-        },
-        {
-            title: 'Currency',
-            dataIndex: 'currency',
-            key: 'currency',
-        },
-        {
-            title: 'Rate',
-            dataIndex: 'rate',
-            key: 'rate'
+            title: 'Currency Name',
+            dataIndex: 'name',
+            key: 'name',
+            align: 'center'
         }
     ]
 
@@ -47,8 +40,8 @@ const TableExpandRate = props => {
     );
 };
 
-TableExpandRate.propTypes = {
+TableList.propTypes = {
     data: PropTypes.array
 }
 
-export default TableExpandRate;
+export default TableList;

@@ -1,15 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Layout, Menu } from 'antd';
-import { LogoutOutlined } from '@ant-design/icons';
-import PathName from '../../PathName';
+import { Layout, Menu, Modal } from 'antd';
+import { ExclamationCircleOutlined, LogoutOutlined } from '@ant-design/icons';
+import PathName from '../../helpers/PathName';
 
 import { White } from '../../assets/color';
 import './style.css'
 
 const { Header } = Layout
+const { confirm } = Modal
 
 const AppHeader = () => {
+    const showConfirmModal = () => {
+        confirm({
+            title: 'Are you sure want to leave?',
+            icon: <ExclamationCircleOutlined />,
+            okText: 'Yes',
+            okType: 'danger',
+            cancelText: 'No',
+            onOk() {
+                window.location.assign(PathName.ROOT)
+            },
+            onCancel() {
+                
+            }
+        })
+    }
+
     return (
         <Header>
             <div className='title'>
@@ -27,11 +44,11 @@ const AppHeader = () => {
                     <Link to={PathName.HOME.HISTORY.BASEURL}>History</Link>
                 </Menu.Item>
             </Menu>
-            
+
             <div className='logout'>
-                <Link to={PathName.ROOT} style={{ color: White, fontSize: 20 }}>
-                    <LogoutOutlined />
-                </Link>
+                {/* <Link to={PathName.ROOT} style={{ color: White, fontSize: 20 }}> */}
+                    <LogoutOutlined onClick={showConfirmModal} style={{ color: White, fontSize: 20 }} />
+                {/* </Link> */}
             </div>
         </Header>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'antd';
-import PathName from '../../PathName';
+import PathName from '../../helpers/PathName';
 
 import '../../assets/style.css'
 

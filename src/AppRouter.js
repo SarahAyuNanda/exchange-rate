@@ -10,7 +10,7 @@ import ExchangeRateBySymbol from './containers/Exchange/SymbolRate';
 import ExchangeRateByHistory from './containers/Exchange/HistoryRate';
 import ExchangeRateByPeriode from './containers/Exchange/PeriodeRate';
 import ExchangeRateByPeriodeSymbol from './containers/Exchange/PeriodeSymbolRate';
-import PathName from './PathName';
+import PathName from './helpers/PathName';
 
 const AppRouter = () => {
     return (
