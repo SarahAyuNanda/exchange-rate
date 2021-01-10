@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import { LogoutOutlined } from '@ant-design/icons';
-import PathName from '../../PathName';
+import PathName from '../../helpers/PathName';
 
 import { White } from '../../assets/color';
 import './style.css'
