@@ -18,7 +18,7 @@ const Home = () => {
             <Content className='content-layout'>
                 <PathLocation pathName={pathName} />
                 <div className='content'>
-                    <span style={{ fontWeight: 500, fontSize: 15 }}>Currency List</span>
+                    <span style={{ fontWeight: 700, fontSize: 18 }}>Currency List</span>
                     <CurrencyList />
                 </div>
             </Content>
