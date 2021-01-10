@@ -12,11 +12,15 @@ const TableList = props => {
             title: 'Currency Code',
             dataIndex: 'code',
             key: 'code',
+            sortDirection: ['descend', 'ascend'],
+            sorter: (a, b) => a.code.localeCompare(b.code),
+            align: 'center'
         },
         {
             title: 'Currency Name',
             dataIndex: 'name',
             key: 'name',
+            align: 'center'
         }
     ]
 
@@ -24,7 +28,14 @@ const TableList = props => {
         <Table
             columns={columnTitle}
             dataSource={data}
-            pagination={{ position: ['bottomCenter'], pageSize: 5 }}
+            pagination={{
+                total: data.length,
+                showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total}`,
+                position: ['bottomCenter'],
+                pageSizeOptions: ['5', '10', '20'],
+                defaultPageSize: 5,
+                showSizeChanger: true
+            }}
             className='table' />
     );
 };

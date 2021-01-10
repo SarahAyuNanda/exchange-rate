@@ -18,21 +18,32 @@ const TableRate = props => {
             dataIndex: 'currency',
             key: 'currency',
             sortDirection: ['descend', 'ascend'],
-            sorter: (a, b) => a.currency.localeCompare(b.currency)
+            sorter: (a, b) => a.currency.localeCompare(b.currency),
+            align: 'left'
         },
         {
             title: 'Rate',
             dataIndex: 'rate',
-            key: 'rate'
+            key: 'rate',
+            align: 'center'
         }
     ]
 
     return (
-        <Table
-            columns={columnTitle}
-            dataSource={data}
-            pagination={{ position: ['bottomCenter'], pageSize: 5 }}
-            className='table' />
+        <div>
+            <Table
+                columns={columnTitle}
+                dataSource={data}
+                pagination={{
+                    total: data.length,
+                    showTotal: (total, range) => `Showing ${range[0]}-${range[1]} of ${total}`,
+                    position: ['bottomCenter'],
+                    pageSizeOptions: ['5', '10', '20'],
+                    defaultPageSize: 5,
+                    showSizeChanger: true
+                }}
+                className='table' />
+        </div>
     );
 };
 
