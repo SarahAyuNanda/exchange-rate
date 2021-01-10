@@ -24,7 +24,7 @@ const TableList = props => {
         <Table
             columns={columnTitle}
             dataSource={data}
-            pagination={{position: ['bottomCenter'], pageSize: 8}}
+            pagination={{position: ['bottomCenter'], pageSize: 7}}
             className='table'
             size='middle' />
     );
