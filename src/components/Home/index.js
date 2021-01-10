@@ -46,9 +46,9 @@ const CurrencyList = () => {
         { code: "PLN", name: "Polish Zloty" }
     ]
 
-    useEffect(() => {
+    const loadData = () => {
         let store = []
-        codeList.sort().map((codeItem, index) => {
+        codeList.sort().map((codeItem, index) => (
             currency.map(item => {
                 if (codeItem === item.code) {
                     store.push({
@@ -58,9 +58,14 @@ const CurrencyList = () => {
                     })
                 }
             })
-        })
+        ))
         setCurrencyList(store)
-    }, [currencyList])
+    }
+
+    useEffect(() => {
+        loadData()
+        // eslint-disable-next-line
+    }, [])
 
     return (
         <TableList data={currencyList} />
