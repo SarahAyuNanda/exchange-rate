@@ -68,7 +68,12 @@ const ExchangeRateBySymbol = () => {
             setBaseData(base)
             setDateData(newDate)
         }
-    }, [rates, base, date])
+
+        if (selectedSymbol.length === 0) {
+            loadData()
+        }
+        // eslint-disable-next-line
+    }, [rates, base, date, selectedSymbol])
 
     return (
         <Layout className='layout'>
