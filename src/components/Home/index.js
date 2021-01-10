@@ -49,7 +49,7 @@ const CurrencyList = () => {
     const loadData = () => {
         let store = []
         codeList.sort().map((codeItem, index) => (
-            currency.map(item => {
+            currency.forEach(item => {
                 if (codeItem === item.code) {
                     store.push({
                         key: index + 1,
