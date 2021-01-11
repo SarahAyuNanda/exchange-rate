@@ -75,8 +75,7 @@ const ExchangeRateByPeriodeSymbol = () => {
                 Object.keys(rates[date]).map((currency, number) => {
                     return (
                         rateStore.push({
-                            key: index + 11,
-                            number: number + 1,
+                            key: `${index + 1}${number + 1}`,
                             currency: currency,
                             rate: rates[date][currency]
                         })
