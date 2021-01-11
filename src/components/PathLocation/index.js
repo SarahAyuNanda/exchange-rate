@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Breadcrumb } from 'antd';
-import CurrentDate from '../CurrentDate';
+import CurrentDateTime from '../CurrentDateTime';
 
 import './style.css'
 
@@ -17,7 +17,7 @@ const PathLocation = props => {
                     </Breadcrumb.Item>
                 ))}
             </Breadcrumb >
-            <CurrentDate />
+            <CurrentDateTime />
         </div>
     );
 };
