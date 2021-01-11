@@ -21,7 +21,7 @@ const SelectSymbol = props => {
             placeholder="Please select the rate symbol"
             onChange={selectChange}
         >
-            {baseList.map(item => <Option value={item}>{item}</Option>)}
+            {baseList.sort().map(item => <Option value={item}>{item}</Option>)}
         </Select>
     );
 };
