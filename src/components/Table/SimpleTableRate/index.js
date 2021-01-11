@@ -9,17 +9,12 @@ const TableRate = props => {
 
     const columnTitle = [
         {
-            title: '#',
-            dataIndex: 'number',
-            key: 'number',
-        },
-        {
             title: 'Currency',
             dataIndex: 'currency',
             key: 'currency',
             sortDirection: ['descend', 'ascend'],
             sorter: (a, b) => a.currency.localeCompare(b.currency),
-            align: 'left'
+            align: 'center'
         },
         {
             title: 'Rate',

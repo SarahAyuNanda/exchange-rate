@@ -9,25 +9,23 @@ const TableExpandRate = props => {
 
     const columnTitle = [
         {
-            title: '#',
-            dataIndex: 'number',
-            key: 'number'
-        },
-        {
             title: 'Date',
             dataIndex: 'date',
             key: 'date',
-            sorter: (a, b) => new Date(a.date) - new Date(b.date)
+            sorter: (a, b) => new Date(a.date) - new Date(b.date),
+            align: 'left'
         },
         {
             title: 'Currency',
             dataIndex: 'currency',
             key: 'currency',
+            align: 'center'
         },
         {
             title: 'Rate',
             dataIndex: 'rate',
-            key: 'rate'
+            key: 'rate',
+            align: 'center'
         }
     ]
 
