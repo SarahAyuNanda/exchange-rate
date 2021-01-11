@@ -21,7 +21,7 @@ const SelectBase = props => {
             defaultValue='EUR'
             onChange={selectChange}
         >
-            {baseList.map(item => <Option value={item}>{item}</Option>)}
+            {baseList.sort().map(item => <Option value={item}>{item}</Option>)}
         </Select>
     );
 };
