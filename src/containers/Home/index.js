@@ -38,7 +38,7 @@ const Home = () => {
             <Content className='content-layout'>
                 <PathLocation pathName={pathName} />
                 <div className='content'>
-                    <span style={{ marginBottom: 10, fontWeight: 700, fontSize: 18 }}>{title}</span>
+                    <span style={{ marginBottom: 10, fontWeight: 700, fontSize: 24 }}>{title}</span>
                     <Space size='small'>
                         <Button disabled={isListDisabled} onClick={showListButton} type='primary' shape='round' style={{ width: 150 }}>
                             Show List
