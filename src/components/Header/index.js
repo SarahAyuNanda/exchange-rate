@@ -13,7 +13,7 @@ const { confirm } = Modal
 const AppHeader = () => {
     const showConfirmModal = () => {
         confirm({
-            title: 'Are you sure want to leave?',
+            title: 'Are you sure you want to leave?',
             icon: <ExclamationCircleOutlined />,
             okText: 'Yes',
             okType: 'danger',
@@ -21,9 +21,7 @@ const AppHeader = () => {
             onOk() {
                 window.location.assign(PathName.ROOT)
             },
-            onCancel() {
-                
-            }
+            onCancel() {}
         })
     }
 
@@ -46,9 +44,7 @@ const AppHeader = () => {
             </Menu>
 
             <div className='logout'>
-                {/* <Link to={PathName.ROOT} style={{ color: White, fontSize: 20 }}> */}
-                    <LogoutOutlined onClick={showConfirmModal} style={{ color: White, fontSize: 20 }} />
-                {/* </Link> */}
+                <LogoutOutlined onClick={showConfirmModal} style={{ color: White, fontSize: 20 }} />
             </div>
         </Header>
     );
