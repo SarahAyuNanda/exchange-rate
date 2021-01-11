@@ -60,7 +60,6 @@ const ExchangeRateByDate = () => {
                 return (
                     rateStore.push({
                         key: index + 1,
-                        number: index + 1,
                         currency: currency,
                         rate: rates[currency]
                     })
