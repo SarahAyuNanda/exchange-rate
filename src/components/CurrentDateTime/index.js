@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
-const CurrentDate = () => {
+const CurrentDateTime = () => {
+    const nowTime = new Date().toLocaleTimeString()
+    
     const [currentDate, setCurrentDate] = useState('')
+    const [currentTime, setCurrentTime] = useState(nowTime)
 
     const monthName = month => {
         switch (month) {
@@ -21,6 +24,10 @@ const CurrentDate = () => {
         }
     }
 
+    const tick = useCallback(() => {
+        setCurrentTime(nowTime)
+    }, [nowTime])
+
     useEffect(() => {
         let newDate = new Date()
         let date = newDate.getDate()
@@ -29,11 +36,14 @@ const CurrentDate = () => {
         let nameOfMonth = monthName(month)
         let showDate = `${nameOfMonth} ${date}, ${year}`
         setCurrentDate(showDate)
-    }, [currentDate])
-    
+
+        let interval = setInterval(tick, 1000)
+        return () => clearInterval(interval);
+    }, [currentDate, tick])
+
     return (
-        <div>{currentDate}</div>
+        <div>{currentDate} {currentTime}</div>
     );
 };
 
-export default CurrentDate;
+export default CurrentDateTime;
