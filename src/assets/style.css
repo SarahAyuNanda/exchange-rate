@@ -43,8 +43,9 @@
 }
 
 .ant-select.ant-select-multiple.ant-select-allow-clear.ant-select-show-search .ant-select-selector {
+    padding: 8px;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
 .date-picker .ant-picker {
